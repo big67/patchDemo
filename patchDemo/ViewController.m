@@ -24,4 +24,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (BOOL) invalidePSD:(NSString *)psd
+{
+    return true;
+}
+
+- (IBAction)textDidChanged:(id)sender {
+    
+    UITextField *tf = (UITextField *)sender;
+    NSLog(@"%@: %@", tf.text, [self invalidePSD:tf.text]?@"有效":@"无效");
+    
+}
+
+
+
 @end
